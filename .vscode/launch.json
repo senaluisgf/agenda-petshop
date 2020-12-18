@@ -1,0 +1,18 @@
+{
+    // Devemos primeiro levantar o servidos
+    // Depois rodar o Debug escolhendo o processo que esta rodando nosso servidor
+    "version": "0.2.0",
+    "configurations": [ 
+        {
+            "name": "Debug: NodeJs",
+            "processId": "${command:PickProcess}",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node",
+            "protocol": "inspector",
+            "restart": true
+        }
+    ]
+}
